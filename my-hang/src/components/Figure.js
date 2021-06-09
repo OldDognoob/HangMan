@@ -3,7 +3,7 @@ import React from 'react'
 
 const Figure = ({ wrongLetters }) => {
   const errors = wrongLetters.length
-
+  // if our errors are greater than 0 then display the following according the structure
   return (
     <svg height="250" width="200" className="figure-container">
       {/* <!-- Rod --> */}
@@ -11,7 +11,7 @@ const Figure = ({ wrongLetters }) => {
       <line x1="140" y1="20" x2="140" y2="50" />
       <line x1="60" y1="20" x2="60" y2="230" />
       <line x1="20" y1="230" x2="100" y2="230" />
-
+      
       {/* <!-- Head --> */}
       {errors > 0 &&
         <circle cx="140" cy="70" r="20" />
@@ -38,4 +38,5 @@ const Figure = ({ wrongLetters }) => {
   )
 }
 
-export default Figure
+export default Figure;
+
