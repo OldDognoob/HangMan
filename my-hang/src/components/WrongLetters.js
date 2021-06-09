@@ -8,12 +8,11 @@ const WrongLetters = ({ wrongLetters }) => {
   // in our reduce we have the previous and current values
   // so if previous values are equal null then we have our current else we have our previous
   // adding a coma in between and then we have our current value
+
   return (
     <div className="wrong-letters-container">
       <div>
-        {wrongLetters.length > 0 && 
-          <p>Wrong</p>
-        }
+        {wrongLetters.length > 0 && <p>Wrong</p>}
         {wrongLetters
           .map((letter, i) => <span key={i}>{letter}</span>)
           .reduce((prev, curr) => prev === null ? [curr] : [prev, ', ', curr], null)}
@@ -22,4 +21,4 @@ const WrongLetters = ({ wrongLetters }) => {
   )
 }
 
-export default WrongLetters
+export default WrongLetters;
